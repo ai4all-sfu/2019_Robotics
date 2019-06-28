@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="initial-scale = 1, minimum-scale = 1, maximum-scale = 1" />
+		<script src="/libs/qimessaging/2/qimessaging.js"></script>
+		<script src="/libs/qi/2/qi.js"></script>
+
+		<script type="text/javascript">
+			var session;
+			var inputText;
+			function sendMsgToPepper() {
+				var myInput = inputText.value;
+				document.getElementById("lastInput").textContent = myInput;
+				session.service('ALDialog').then(function(dialog) {
+					dialog.forceInput(myInput);
+					}, function (error) {
+						console.log(error);
+				});
+				inputText.value = '';
+				document.getElementById('submitBtn').disabled = true;
+			}
+
+			function connectToPepper(){
+				// connecting to robot
+				try {
+				  QiSession( function (s) {
+					console.log('connected!');
+					session = s;
+				  });
+				} catch (err) {
+				  console.log("Error when initializing QiSession: " + err.message);
+				  console.log("Make sure you load this page from the robots server.");
+				}
+				inputText = document.getElementById("inputText");
+				document.getElementById('submitBtn').disabled = true;
+			}
+
+			function stoppedTyping(){
+				if(inputText.value.length > 0) { 
+					document.getElementById('submitBtn').disabled = false; 
+				} else { 
+					document.getElementById('submitBtn').disabled = true;
+				}
+			}
+		</script>
+	</head>
+
+	<body onload='connectToPepper()'>
+		<h1>Voice Input helper</h1>
+		<p>Pepper cannot recognize Proper nouns still. Please use the input below to enter your response and, then click "Submit" to submit the form:</p>
+
+		<span>
+		  Input: <input type="text" id="inputText" onkeyup="stoppedTyping()"><br>
+		  <button class="button" id ='submitBtn' onclick="sendMsgToPepper()">Submit</button>
+		</span>
+		<p> You said <span id='lastInput'> - </span></p>
+	</body>
+</html>
