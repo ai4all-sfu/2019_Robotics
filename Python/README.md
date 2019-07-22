@@ -1,7 +1,7 @@
 ## Python - Face detection and recognition
 
 Presentation links:<br />
-* [Presentation about Face Recognition]( https://drive.google.com/file/d/1jfvpDIHq6u_BzFHpyf_rctHAC-7gwRmJ/view?usp=sharing)
+* [Presentation about Face Recognition]( https://drive.google.com/file/d/1MFOT2lNEF1K_Yimj15Cr1HgcDT7Nyn2o/view?usp=sharing)
 
 Useful links:<br />
 * [Introduction to robots](https://prezi.com/view/hY0dAoNgMykJ3TGK3uTg/)
