@@ -6,6 +6,8 @@ Slides: [Introduction](https://docs.google.com/presentation/d/1uViDWhsALzFUFQwSk
 
 * ChatBot
 	* [QiChat concepts](http://doc.aldebaran.com/2-1/naoqi/audio/dialog/dialog-syntax_full.html)
+	* [QiChat cheatsheet](http://doc.aldebaran.com/2-1/naoqi/audio/dialog/aldialog_syntax_cheat_sheet.html)
+	* [QiChat tutorial](https://www.youtube.com/watch?v=tqVbX5NWFdU)
 	* [Pepper Animation List](http://doc.aldebaran.com/2-4/naoqi/motion/alanimationplayer-advanced.html)
 * Box objects
 	* [Input/ output notations](http://doc.aldebaran.com/2-4/software/choregraphe/objects/box_input_output.html)
